@@ -1,9 +1,9 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Documentation for TaxCalc App</title>
+  <title>TaxCalc</title>
   <meta charset="utf-8">
-  <meta name="description" content="Documentation for TaxCalc App">
+  <meta name="description" content="TaxCalc">
   <meta name="author" content="Ryan Dolen">
   <meta name="generator" content="slidify" />
   <meta name="apple-mobile-web-app-capable" content="yes">
@@ -32,8 +32,8 @@
     <!-- LOGO SLIDE -->
         <slide class="title-slide segue nobackground">
   <hgroup class="auto-fadein">
-    <h1>Documentation for TaxCalc App</h1>
-    <h2></h2>
+    <h1>TaxCalc</h1>
+    <h2>A Sales Tax Calculator App</h2>
     <p>Ryan Dolen<br/></p>
   </hgroup>
   <article></article>  
@@ -46,16 +46,9 @@
     <h2>TaxCalc</h2>
   </hgroup>
   <article data-timings="">
-    <p>This app is a very basic sales tax calculator.</p>
+    <p>TaxCalc is a very basic and easy to use sales tax calculator that contains the latest 2014 sales tax rates.</p>
 
-<p>Just input: </p>
-
-<ol>
-<li><p>The cost of the purchase  </p></li>
-<li><p>The state where the purchase was made  </p></li>
-</ol>
-
-<p>Then hit &#39;Submit&#39;</p>
+<p>If you opperate a business that sells to customers in multiple states, this app will help you to calculate the required sales tax.</p>
 
   </article>
   <!-- Presenter Notes -->
@@ -63,15 +56,24 @@
 
 <slide class="" id="slide-2" style="background:;">
   <hgroup>
-    <h2>TaxCalc</h2>
+    <h2>TaxCalc input/output</h2>
   </hgroup>
   <article data-timings="">
-    <p>In the right column you&#39;ll see:  </p>
+    <p>Just input: </p>
 
 <ol>
-<li><p>The subtotal that was entered  </p></li>
-<li><p>The total tax  </p></li>
-<li><p>The total including tax  </p></li>
+<li>The cost of the purchase<br></li>
+<li>The state where the purchase was made<br></li>
+</ol>
+
+<p>Then hit &#39;Submit&#39;</p>
+
+<p>In the right column you&#39;ll see:  </p>
+
+<ol>
+<li>The subtotal that was entered<br></li>
+<li>The total tax<br></li>
+<li>The total including tax</li>
 </ol>
 
   </article>
@@ -80,12 +82,42 @@
 
 <slide class="" id="slide-3" style="background:;">
   <hgroup>
+    <h2>TaxCalc simplfied example</h2>
+  </hgroup>
+  <article data-timings="">
+    <pre><code class="r"># User input
+cost &lt;- 10          
+state &lt;- &quot;New York&quot; 
+
+# Calculation
+taxrate &lt;- 0.04 #from tax rate databse
+
+tax &lt;- cost * taxrate
+tax
+</code></pre>
+
+<pre><code>## [1] 0.4
+</code></pre>
+
+<pre><code class="r">totalcost &lt;- cost + cost*taxrate
+totalcost
+</code></pre>
+
+<pre><code>## [1] 10.4
+</code></pre>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-4" style="background:;">
+  <hgroup>
     <h2>Sources</h2>
   </hgroup>
   <article data-timings="">
     <p>State tax data came from the <a href="http://taxfoundation.org/article/state-and-local-sales-tax-rates-2014">Tax Foundation</a>.  </p>
 
-<p>Data is located in Table 1 in the first two columns, &quot;State&quot; and &quot;State Tax Rate.&quot;  </p>
+<p>Data is located in Table 1 in the first two columns, &quot;State&quot; and &quot;State Tax Rate.&quot; </p>
 
   </article>
   <!-- Presenter Notes -->
@@ -103,14 +135,20 @@
     </li>
     <li>
       <a href="#" target="_self" rel='tooltip' 
-        data-slide=2 title='TaxCalc'>
+        data-slide=2 title='TaxCalc input/output'>
          2
       </a>
     </li>
     <li>
       <a href="#" target="_self" rel='tooltip' 
-        data-slide=3 title='Sources'>
+        data-slide=3 title='TaxCalc simplfied example'>
          3
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=4 title='Sources'>
+         4
       </a>
     </li>
   </ul>
