@@ -25,7 +25,15 @@ shinyUI(
       h4('Total Tax'),
       verbatimTextOutput("statetax"),
       h4('Total'),
-      verbatimTextOutput("totalcost")
+      verbatimTextOutput("totalcost"),
+      br(),
+      p("Calculate the sales tax and total cost of a 
+        purchase using this tool. Input the cost and state 
+        that the purchase was made in, and hit 'Submit.'"),
+      br(),
+      p("The display above will show you the subtotal, the amount of tax
+        based on the rate of the selected state, and the total cost
+        including the tax.")
     )
    )
   )
